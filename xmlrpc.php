@@ -46,6 +46,13 @@ switch($xml->methodName)
 				
 				case 'description':
 					$url = (string)$data->value->string;
+
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+fwrite($myfile, $url);
+fclose($myfile);
+
+
+
 					break;
 				//this is used for title
 				default:
